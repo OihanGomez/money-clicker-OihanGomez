@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Clicker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Logros -->
+        <div class="achievements">
+            <h2>Logros</h2>
+            <ul>
+                <li>Primer clic</li>
+                <li>Gana $100</li>
+                <li>Compra tu primera mejora</li>
+            </ul>
+        </div>
+
+        <!-- Centro - Botón Moneda -->
+        <div class="center">
+            <h1>Money Clicker</h1>
+            <div id="money-count">0€</div>
+            <div id="money-per-second">Producción por segundo: <span id="moneyPS">0€</span>/s</div>
+            <button id="click-btn"></button>
+        </div>
+
+        <!-- Tienda de mejoras -->
+        <div class="shop">
+            <h2>Mejoras</h2>
+            <div class="shop-item" id="bank">
+                <h3 title="Automatiza transferencias digitales para generar ingresos constantes.">Banco Online</h3>
+                <p>Coste: <span id="costbank">100</span>€</p>
+                <p>Beneficio: +1€/s</p>
+                <p>Cantidad: <span id="quantitybank">0</span></p>
+
+                <button class="buy-button" onclick="updateShop('bank')">Comprar</button>
+            </div>
+            <div class="shop-item" id="inverter">
+                <h3>Inversores millonarios</h3>
+                <p>Coste: <span id="costinverter">400</span>€</p>
+                <span>Beneficio: +5€/s</span>
+                <p>Cantidad: <span id="quantityinverter">0</span></p>
+                <button class="buy-button" onclick="updateShop('inverter')">Comprar</button>
+            </div>
+            <div class="shop-item" id="printer">
+                <h3>Impresora de dinero</h3>
+                <p>Coste: <span id="costprinter">1000</span>€</p>
+                <span>Beneficio: +13€/s</span>
+                <p>Cantidad: <span id="quantityprinter">0</span></p>
+
+                <button class="buy-button" onclick="updateShop('printer')">Comprar</button>
+            </div>
+
+            <div id="time-next-upgrade">Tiempo para próxima mejora: --</div>
+        </div>
+    </div>
+</body>
+<script src="../javascript/main.js"></script>
+<script src="../javascript/improvements.js"></script>
+</html>
