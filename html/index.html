@@ -10,14 +10,13 @@
 <body>
     <div class="game-container">
         <!-- Logros -->
-        <div class="achievements">
+        <div class="achievements"">
             <h2>Logros</h2>
-            <ul>
-                <li>Primer clic</li>
-                <li>Gana $100</li>
-                <li>Compra tu primera mejora</li>
+            <ul id="achievement-list">
+                <!-- Los logros se añadirán aquí dinámicamente -->
             </ul>
         </div>
+        
 
         <!-- Centro - Botón Moneda -->
         <div class="center">
@@ -28,36 +27,66 @@
         </div>
 
         <!-- Tienda de mejoras -->
-        <div class="shop">
-            <h2>Mejoras</h2>
-            <div class="shop-item" id="bank">
-                <h3 title="Automatiza transferencias digitales para generar ingresos constantes.">Banco Online</h3>
-                <p>Coste: <span id="costbank">100</span>€</p>
-                <p>Beneficio: +1€/s</p>
-                <p>Cantidad: <span id="quantitybank">0</span></p>
+<!-- Tienda de mejoras -->
+<div class="shop">
+    <h2>Mejoras</h2>
+    <div class="shop-item" id="digital_wallet">
+        <h3>Monedero Digital</h3>
+        <p>Coste: <span id="costdigital_wallet">10</span>€</p>
+        <p>Beneficio: +1€/s</p>
+        <p>Cantidad: <span id="quantitydigital_wallet">0</span></p>
+        <button class="buy-button" onclick="updateShop('digital_wallet')">Comprar</button>
+    </div>
+    <div class="shop-item" id="bank">
+        <h3>Banco Online</h3>
+        <p>Coste: <span id="costbank">100</span>€</p>
+        <p>Beneficio: +5€/s</p>
+        <p>Cantidad: <span id="quantitybank">0</span></p>
+        <button class="buy-button" onclick="updateShop('bank')">Comprar</button>
+    </div>
+    <div class="shop-item" id="investor">
+        <h3>Inversores Millonarios</h3>
+        <p>Coste: <span id="costinvestor">400</span>€</p>
+        <p>Beneficio: +15€/s</p>
+        <p>Cantidad: <span id="quantityinvestor">0</span></p>
+        <button class="buy-button" onclick="updateShop('investor')">Comprar</button>
+    </div>
+    <div class="shop-item" id="printer">
+        <h3>Impresora de Dinero</h3>
+        <p>Coste: <span id="costprinter">1000</span>€</p>
+        <p>Beneficio: +30€/s</p>
+        <p>Cantidad: <span id="quantityprinter">0</span></p>
+        <button class="buy-button" onclick="updateShop('printer')">Comprar</button>
+    </div>
+    <div class="shop-item" id="investment_fund">
+        <h3>Fondo de Inversión</h3>
+        <p>Coste: <span id="costinvestment_fund">5000</span>€</p>
+        <p>Beneficio: +70€/s</p>
+        <p>Cantidad: <span id="quantityinvestment_fund">0</span></p>
+        <button class="buy-button" onclick="updateShop('investment_fund')">Comprar</button>
+    </div>
+    <div class="shop-item" id="money_launderer">
+        <h3>Lavador de Dinero</h3>
+        <p>Coste: <span id="costmoney_launderer">10000</span>€</p>
+        <p>Beneficio: +150€/s</p>
+        <p>Cantidad: <span id="quantitymoney_launderer">0</span></p>
+        <button class="buy-button" onclick="updateShop('money_launderer')">Comprar</button>
+    </div>
+    <div class="shop-item" id="treasury_bonds">
+        <h3>Bonos del Tesoro</h3>
+        <p>Coste: <span id="costtreasury_bonds">25000</span>€</p>
+        <p>Beneficio: +300€/s</p>
+        <p>Cantidad: <span id="quantitytreasury_bonds">0</span></p>
+        <button class="buy-button" onclick="updateShop('treasury_bonds')">Comprar</button>
+    </div>
+    <div id="time-next-upgrade">Tiempo para próxima mejora: --</div>
+</div>
 
-                <button class="buy-button" onclick="updateShop('bank')">Comprar</button>
-            </div>
-            <div class="shop-item" id="inverter">
-                <h3>Inversores millonarios</h3>
-                <p>Coste: <span id="costinverter">400</span>€</p>
-                <span>Beneficio: +5€/s</span>
-                <p>Cantidad: <span id="quantityinverter">0</span></p>
-                <button class="buy-button" onclick="updateShop('inverter')">Comprar</button>
-            </div>
-            <div class="shop-item" id="printer">
-                <h3>Impresora de dinero</h3>
-                <p>Coste: <span id="costprinter">1000</span>€</p>
-                <span>Beneficio: +13€/s</span>
-                <p>Cantidad: <span id="quantityprinter">0</span></p>
 
-                <button class="buy-button" onclick="updateShop('printer')">Comprar</button>
-            </div>
-
-            <div id="time-next-upgrade">Tiempo para próxima mejora: --</div>
-        </div>
     </div>
 </body>
 <script src="../javascript/main.js"></script>
 <script src="../javascript/improvements.js"></script>
+<script src="../javascript/achievements.js"></script>
+
 </html>

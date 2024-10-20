@@ -127,3 +127,23 @@ h1 {
 }
 
 
+.achieved {
+    color: green; /* Cambia el color a verde */
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Asegúrate de que esté en frente de otros elementos */
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.not-achieved {
+    color: grey; /* Color para logros sin hacer */
+}
